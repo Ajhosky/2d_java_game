@@ -1,5 +1,8 @@
 package com.company;
 
+import entity.Entity;
+import monsters.MonstersFactory;
+
 import javax.swing.*;
 
 public class Main {
@@ -20,5 +23,10 @@ public class Main {
         window.setVisible(true);
 
         gamePanel.startGameThread();
+
+
+
+
+
     }
 }

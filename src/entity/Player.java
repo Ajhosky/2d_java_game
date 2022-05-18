@@ -46,16 +46,16 @@ public class Player extends Entity{
     {
 
         if (keyH.rightPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.upPressed == true){
-            if(keyH.upPressed == true){
+            if(keyH.upPressed == true && y > 0){
                 direction = "up";
                 y -= speed;
-            }else if(keyH.downPressed == true){
+            }else if(keyH.downPressed == true && y < 525){
                 direction = "down";
                 y += speed;
-            }else if(keyH.leftPressed == true){
+            }else if(keyH.leftPressed == true && x > 0){
                 direction = "left";
                 x -= speed;
-            }else if(keyH.rightPressed == true){
+            }else if(keyH.rightPressed == true && x < 722){
                 direction = "right";
                 x += speed;
             }

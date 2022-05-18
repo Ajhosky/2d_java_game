@@ -1,6 +1,7 @@
 package monsters;
 
 import com.company.GamePanel;
+import entity.Entity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -19,15 +20,15 @@ public class MonstersFactory {
             int x, y;
 
             do {
-                x = rnd.nextInt(16) * GamePanel.tileSize;
-                y = rnd.nextInt(12) * GamePanel.tileSize;
-            } while (CharacterClass.occupiedCells[x][y] > 0);
+                x = rnd.nextInt(16) * 48;
+                y = rnd.nextInt(12) * 48;
+            } while (Entity.occupiedCells[x][y] > 0);
 
-            CharacterClass.occupiedCells[x][y] = 10;
+            Entity.occupiedCells[x][y] = 10;
             MonsterBase monster = new MonsterBase(x, y);
 
             monsters.add(monster);
-            gameField.repaint();
+            gamePanel.repaint();
         }
     }
 
